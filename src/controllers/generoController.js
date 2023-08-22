@@ -11,6 +11,7 @@ export class GeneroController {
           
             const generoDB = await Genero.create(genero);
   
+            
           
             res.status(201).json({
               data: generoDB,
