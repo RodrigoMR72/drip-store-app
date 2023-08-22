@@ -10,7 +10,6 @@ export class GeneroController {
             const genero = { codigo, nome };
           
             const generoDB = await Genero.create(genero);
-
   
           
             res.status(201).json({
