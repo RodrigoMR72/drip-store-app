@@ -1,6 +1,16 @@
-import mongoose, { Types } from "mongoose";
+import mongoose, { Schema, Types } from "mongoose";
 
-export default Genero = mongoose.model('Genero', {
-    nome: String,
-    codigo: Number
+const generoSchema = new Schema(
+    {
+    nome: { type: String, required: true },
+    codigo: {
+        type: Number,
+        unique: true,
+        required: true
+    }
+    
 })
+
+const Genero = mongoose.model(`Genero`, generoSchema)
+
+export {Genero, generoSchema}

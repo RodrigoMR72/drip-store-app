@@ -23,7 +23,7 @@ export class ProdutoController {
     }
 
     static buscarTodos = async (req, res) => {
-        const produtos = await Produto.find()
+        const produtos = await Produto.find().populate('genero')
         res.status(200).json(produtos)
     }
 

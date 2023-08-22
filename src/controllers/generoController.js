@@ -15,7 +15,7 @@ export class GeneroController {
           
             res.status(201).json({
               data: generoDB,
-              msg: "Produto cadastrado com sucesso!",
+              msg: "Genero cadastrado com sucesso!",
             });
           
 
